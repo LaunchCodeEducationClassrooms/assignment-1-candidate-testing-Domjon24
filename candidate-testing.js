@@ -44,13 +44,13 @@ function gradeQuiz(candidateAnswers) {
    } 
   }
   let grade = 0;
-  grade = (total / questions.length) * 10;
-  if (grade * 10 > 70 ) {
+  grade = (total / questions.length) * 100;
+  if (grade >= 80 ) {
     result = "PASSED";
    } else {
     result = "FAILED";
   } 
-  console.log(`>>> Overall Grade: ${grade * 10}% (${total} of ${questions.length} responses correct) <<<`);
+  console.log(`>>> Overall Grade: ${grade}% (${total} of ${questions.length} responses correct) <<<`);
   console.log(`>>> Status: ${result} <<<`);
 
   return grade;
